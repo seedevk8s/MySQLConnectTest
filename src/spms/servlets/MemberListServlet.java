@@ -29,7 +29,7 @@ public class MemberListServlet extends GenericServlet{
 			//1, 사용할 JDBC 드라이버를 등록하라. |
 			DriverManager.registerDriver(new com.mysql.jdbc.Driver());
 			//2. 드라이버를 사용하여 MySQL 서버와 연결하라.
-			conn = DriverManager.getConnection("jdbc:mysql://localhost/myintranet","root","interhouse");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost/myintranet?serverTimezone=UTC","root","interhouse");
 			//3. 커넥션 객체로부터 SQL을 던질 객체를 준비하라.
 			stmt = conn.createStatement();
 			//4. SQL을 던지는 객체를 사용하여 서버에 질의하라!
